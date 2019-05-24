@@ -76,3 +76,51 @@ console.log(socialMedia.facebook, typeof socialMedia);
 console.log(socialMedia.hobbies[0].gamer.mobile);
 // console.log(socialMedia.hobbies[3].PC);
 console.log(socialMedia.hobbies[0].gamer.PC);
+
+// ================= Scope & Hoisting================
+
+//Hoisting -> mengangkat
+//hanya var yang bisa hoisting
+a = 1;
+var a;
+console.log(a);
+
+/* let & const tidak bisa sebagai hoisting
+b = 3;
+let b;
+console.log(b);
+
+// c = 3;
+// const c;
+// console.log(c);
+*/
+
+//Scope
+let d = 2; //global scope
+const z = 111;
+{
+  let e = 3; //local scope
+  var f = 2333;
+  console.log(d);
+  console.log(z);
+  const y = 111;
+  console.log(x);
+}
+
+// console.log(e);
+console.log(f);
+
+// console.log(y);
+
+{
+  console.log(d);
+  // console.log(e);
+  console.log(f);
+  var x = 23;
+}
+
+/*
+--------Kesimpulan-----------
+hati-hati menggunakan var karna dia hoisting(mengangkat) dapat dipanggil
+di scope mana saja dan sebaiknya menggunakan let dan const
+*/
